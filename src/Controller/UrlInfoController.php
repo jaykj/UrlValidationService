@@ -3,7 +3,7 @@
 namespace App\Controller;
 
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-    use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpFoundation\JsonResponse;
     use Symfony\Component\HttpFoundation\Request;
     use App\Service\UrlValidationService;
 
@@ -13,12 +13,11 @@ namespace App\Controller;
 
         {
 
-            //$routeName = $request->attributes->get('_route');
             $routeParameters = $request->attributes->get('_route_params');
             $isValid = $urlValidationService->validateURl($routeParameters);
-            //var_dump($routeParameters);
-            return new Response(
-                '<html><body>'.$isValid.'</body><html>'
+            $status =$isValid == 1 ? "Blocked":"Allowed";
+            return new JsonResponse(
+                 $status
             );
 
         }
