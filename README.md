@@ -3,7 +3,8 @@
 ## Clone the repository 
 `git clone https://github.com/jaykj/UrlValidationService.git`
 ## Install composer only for the project directory
-'cd UrlValidationService`
+
+`cd UrlValidationService`
 
 `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
 
@@ -18,7 +19,7 @@
 
 `curl http://localhost:<portnumber>/urlinfo/1/nodomain.com:9000/goodurl'
 
-should return allowed
+should return Allowed
 
 `curl http://localhost:<portnumber>somedomian.com:8080string/wordvalue`
 
