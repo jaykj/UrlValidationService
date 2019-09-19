@@ -1,5 +1,6 @@
 # url validation service
-
+## Install php 7.13 or higher
+`php -v`
 ## Clone the repository 
 `git clone https://github.com/jaykj/UrlValidationService.git`
 ## Install composer only for the project directory
