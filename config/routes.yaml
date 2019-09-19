@@ -1,0 +1,10 @@
+index:
+   path: /
+   controller: App\Controller\DefaultController::index
+urlinfo:
+  path: /urlinfo/1/{url}
+  controller: App\Controller\UrlInfoController::index
+  requirements:
+    url: .+
+  defaults:
+    url: domain.com:8080/badrulr
